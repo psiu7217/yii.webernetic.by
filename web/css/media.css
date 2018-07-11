@@ -14,6 +14,16 @@
         width: 0;
         opacity: 0;
     }
+    .top_block .add_check {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    header .left_block {
+        width: 100%;
+    }
+    .categorys_table .item_title {
+        overflow: hidden;
+    }
 }
 @media screen and (max-width: 590px) {
     

@@ -162,6 +162,7 @@ a.desc:after {
 .categorys_table .item {
     background: rgba(0, 90, 176, 0.1);
 }
+
 .categorys_table .item.child {
     background: rgba(22, 176, 0, 0.1);
     border-bottom: solid 1px #dddddd;
@@ -173,6 +174,15 @@ a.desc:after {
     background: rgba(0, 255, 17, 0.3);
     border: solid 1px #000000;
 }
+.categorys_table .item.active,
+.categorys_table .item:hover,
+.categorys_table .item.child:hover,
+.categorys_table .item.child:active,
+.categorys_table .item:hover .danger{
+    background: rgba(52, 0, 255, 0.2);
+}
+
+
 .danger {
     background-color: #f2dede;
 }

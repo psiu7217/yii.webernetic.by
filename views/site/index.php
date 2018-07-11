@@ -13,13 +13,13 @@ $this->title = 'Бюджет';
     <div class="top_block">
         <div class="row">
             <div class="col-sm-4">
-                <button class="btn btn_filter">Фильтр</button>
+                <button class="btn btn_filter hidden-xs">Фильтр</button>
             </div>
             <div class="col-sm-4">
 
             </div>
             <div class="col-sm-4 text-right">
-                <a href="<?php echo $url_add_check ?>" class="btn btn_green">Добавить чек</a>
+                <a href="<?php echo $url_add_check ?>" class="btn btn_green add_check">Добавить чек</a>
             </div>
         </div>
     </div>
