@@ -1,0 +1,30 @@
+@media screen and (max-width: 1199px) {
+    
+}
+
+@media screen and (max-width: 991px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    .wrap {
+        margin: 50px 0 0 0;
+    }
+    .wrap .sidebar {
+        width: 0;
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 590px) {
+    
+}
+@media screen and (max-width: 450px) {
+   
+}
+
+@media screen and (max-width: 400px) {
+   
+}
+@media screen and (max-width: 350px) {
+   
+}

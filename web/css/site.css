@@ -1,0 +1,278 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+
+/*---------------CUSTOM----------------------*/
+
+.title_h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn {
+    cursor: pointer;
+    border: solid 1px #000;
+    border-radius: 5px;
+    font-size: 24px;
+}
+.btn_green {
+    background-color: #468847;
+    color: #ffffff;
+}
+.btn_red {
+    background-color: #ce1c1f;
+    color: #ffffff;
+}
+.btn_blue {
+    background-color: #115fb7;
+    color: #ffffff;
+}
+.top_items .btn {
+
+}
+
+.categorys_table {
+
+}
+.categorys_table .input {
+
+}
+.categorys_table .output {
+
+}
+
+.categorys_table .item_title {
+    border-bottom: solid 1px;
+    background: rgba(34, 34, 34, 0.2);
+    font-size: 16px;
+}
+.categorys_table .item {
+    background: rgba(0, 90, 176, 0.1);
+}
+.categorys_table .item.child {
+    background: rgba(22, 176, 0, 0.1);
+    border-bottom: solid 1px #dddddd;
+}
+.categorys_table.results .item {
+    background: rgba(255, 219, 0, 0.3);
+}
+.categorys_table.results .item.result {
+    background: rgba(0, 255, 17, 0.3);
+    border: solid 1px #000000;
+}
+.danger {
+    background-color: #f2dede;
+}
+
+.filter_block {
+    display: none;
+    margin: 0 0 25px 0;
+}
+.filter_block p.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.top_block {
+    margin: 0 0 25px 0;
+}
+
+
+
+
+
+/*          New style           */
+header {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: #3a4149;
+    border-bottom: 1px solid #23282c;
+    position: fixed;
+    top: 0;
+    z-index: 1020;
+    width: 100%;
+}
+header .left_block,
+.wrap .sidebar {
+    width: 200px;
+}
+header .left_block {
+    display: flex;
+}
+header a,
+.sidebar a,
+header #hide_sidebar{
+    color: #c8ced3;
+    display: block;
+}
+header .logo {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 150px;
+}
+header #hide_sidebar {
+    width: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+header a:hover,
+.sidebar a:hover,
+header a:focus,
+.sidebar a:focus,
+header #hide_sidebar:hover{
+    color: #e4e7ea;
+    text-decoration: none;
+}
+header .navbar-brand {
+    float: none;
+}
+.wrap {
+    margin: 50px 0 0 200px;
+    transition: 0.3s;
+}
+
+.wrap .sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    display: flex;
+    height: 100%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    color: #f3f4f5;
+    background: #3a4149;
+    border-right: 1px solid #23282c;
+    z-index: 1019;
+    width: 200px;
+    opacity: 1;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.sidebar li a:hover,
+.sidebar li a:focus{
+    color: #fff;
+    background: #20a8d8;
+}
+.sidebar li.active {
+    color: #fff;
+    background: #343b41;
+}
