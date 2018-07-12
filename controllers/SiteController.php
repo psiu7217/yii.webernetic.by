@@ -79,7 +79,7 @@ class SiteController extends Controller
         //Получаем посдение чеки
 
 
-        $data['last_checks'] = Checks::get_last_checks(10);
+        $data['last_checks'] = Checks::get_last_checks(9);
 
 
 

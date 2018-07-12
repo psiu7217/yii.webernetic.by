@@ -51,29 +51,42 @@ $this->title = 'Бюджет';
     </div>
 
 
-    <div class="last_check">
+    <!--        Последние добавленные чеки          -->
 
-        <div class="row">
-            <div class="col-sm-12">
-                <p class="main_title">Последние добавленные чеки</p>
+    <div class="last_check">
+        <div class="card">
+            <div class="card_header">
+                <p class="title">Последние добавленные чеки</p>
+            </div>
+
+            <div class="card_body">
+                <div class="row items">
+                    <?php foreach ($last_checks as $check) { ?>
+
+                        <div class="item col-sm-4">
+                            <div class="card">
+                                <p class="name"><?php echo $check['name'] ?></p>
+                                <p class="price"><?php echo $check['price'] ?></p>
+                                <p class="data"><?php echo $check['data'] ?></p>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+                </div>
             </div>
         </div>
-
-        <div class="row items">
-            <?php foreach ($last_checks as $check) { ?>
-
-                <div class="item col-sm-4">
-                    <div class="card">
-                        <p class="name"><?php echo $check['name'] ?></p>
-                        <p class="price"><?php echo $check['price'] ?></p>
-                        <p class="data"><?php echo $check['data'] ?></p>
-                    </div>
-                </div>
-
-            <?php } ?>
-        </div>
-
     </div>
+
+    <!--  ####  Последние добавленные чеки    ####  -->
+
+
+
+    <!--        Таблица доходов          -->
+
+
+
+    <!-- ####   Таблица доходов    ####  -->
+
 
 
 
