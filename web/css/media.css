@@ -24,6 +24,23 @@
     .categorys_table .item_title {
         overflow: hidden;
     }
+
+    .last_check .item .name {
+        width: auto;
+    }
+    .last_check .item .price {
+        float: right;
+    }
+    .last_check .item .data {
+        position: absolute;
+        right: 15px;
+        background: #fff;
+        opacity: 0;
+        transition: 0.2s;
+    }
+    .last_check .item.active .data {
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 590px) {
     

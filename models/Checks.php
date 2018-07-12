@@ -10,7 +10,7 @@ class Checks extends ActiveRecord
     //Получить все чеки
     static public function get_all_checks()
     {
-        return Checks::find()->orderBy('data')->all();
+        return Checks::find(['id_user' => Users::$id])->orderBy('data')->all();
     }
 
     //Получить один чек по id
@@ -117,6 +117,13 @@ class Checks extends ActiveRecord
 
         return false;
 
+    }
+
+
+    //Получить полседние чеки
+    static public function get_last_checks($limit)
+    {
+        return Checks::find(['id_user' => Users::$id])->orderBy('data desc')->limit($limit)->all();
     }
 
 

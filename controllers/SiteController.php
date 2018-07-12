@@ -74,6 +74,16 @@ class SiteController extends Controller
         $data['url_add_check'] = Url::to(['checks/add']);
         $url_edit_category = Url::to(['categorys/edit']);
 
+
+
+        //Получаем посдение чеки
+
+
+        $data['last_checks'] = Checks::get_last_checks(10);
+
+
+
+
         //Массив главных категорий (id_parent = 0)
         $categorys = Categorys::get_category_parent_id();
 

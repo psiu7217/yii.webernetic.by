@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
 
 
-    $('.categorys_table .item').click(function () {
+    $('.categorys_table .item, .last_check .item').click(function () {
         if ($(this).hasClass('active')){
             $(this).removeClass('active');
         }else {
