@@ -457,7 +457,13 @@ a.desc:after {
 
 
 .danger {
-    background-color: #f2dede;
+    background-color: #f86c6b;
+}
+.table .danger{
+    background: none;
+}
+.table > tbody > tr.danger > td {
+    background-color: rgba(248, 108, 107, 0.15);
 }
 
 .filter_block {
@@ -561,6 +567,9 @@ header .navbar-brand {
     background: #343b41;
 }
 
+.margin_bottom {
+    margin-bottom: 15px;
+}
 
 .last_check {
     margin: 0 0 15px 0;
@@ -574,7 +583,7 @@ header .navbar-brand {
     margin: 0;
 }
 .last_check .item .name {
-    width: 40%;
+    width: 55%;
 }
 .last_check .item .price {
 
@@ -596,4 +605,14 @@ header .navbar-brand {
 }
 .card_body {
     padding: 15px 15px 5px 15px;
+}
+
+.table.table-striped .total {
+    background: rgba(99, 194, 222, 0.3);
+    border-bottom: solid 3px #bdbdbe;
+    font-size: 15px;
+    font-weight: 500;
+}
+.overflow_auto {
+    overflow: auto;
 }

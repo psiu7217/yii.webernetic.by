@@ -80,17 +80,148 @@ $this->title = 'Бюджет';
     <!--  ####  Последние добавленные чеки    ####  -->
 
 
-
     <!--        Таблица доходов          -->
 
+    <div class="card margin_bottom overflow_auto">
+        <div class="card_header">
+            <p class="title">Таблица доходов</p>
+        </div>
+        <div class="card_body">
 
+            <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>План</th>
+                    <th>Факт</th>
+                    <th>Отклонение</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                <?php foreach ($categorys_input as $category) { ?>
+
+                    <?php if ($category['childs']) {
+                        foreach ($category['childs'] as $child) { ?>
+                            <tr>
+                                <td><a href="<?php echo $child['url'] ?>" data-pjax="0"><?php echo $child['name'] ?></a></td>
+                                <td><?php echo $child['plan'] ?></td>
+                                <td><?php echo $child['fact'] ?></td>
+                                <td><?php echo $child['deviation'] ?></td>
+                            </tr>
+                        <?php }
+                    } ?>
+
+                    <tr class="total">
+                        <td><?php echo $category['name'] ?></td>
+                        <td><?php echo $category['plan'] ?></td>
+                        <td><?php echo $category['fact'] ?></td>
+                        <td><?php echo $category['deviation'] ?></td>
+                    </tr>
+
+                <?php } ?>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
 
     <!-- ####   Таблица доходов    ####  -->
 
 
+    <!--        Таблица Расходов          -->
+
+    <div class="card margin_bottom overflow_auto">
+        <div class="card_header">
+            <p class="title">Таблица расходов</p>
+        </div>
+        <div class="card_body">
+
+            <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>План</th>
+                    <th>Факт</th>
+                    <th>Отклонение</th>
+                </tr>
+                </thead>
+                <tbody>
 
 
-    <div class="categorys_table input">
+                <?php foreach ($categorys_output as $category) { ?>
+
+                    <?php if ($category['childs']) {
+                        foreach ($category['childs'] as $child) { ?>
+                            <tr class="<?php echo $child['class'] ?>">
+                                <td><a href="<?php echo $child['url'] ?>" data-pjax="0"><?php echo $child['name'] ?></a></td>
+                                <td><?php echo $child['plan'] ?></td>
+                                <td><?php echo $child['fact'] ?></td>
+                                <td><?php echo $child['deviation'] ?></td>
+                            </tr>
+                        <?php }
+                    } ?>
+
+                    <tr class="total">
+                        <td><?php echo $category['name'] ?></td>
+                        <td><?php echo $category['plan'] ?></td>
+                        <td><?php echo $category['fact'] ?></td>
+                        <td><?php echo $category['deviation'] ?></td>
+                    </tr>
+
+                <?php } ?>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- ####   Таблица Расходов    ####  -->
+
+
+    <!--        Таблица Экономия семейного бюджета          -->
+
+    <div class="card margin_bottom overflow_auto">
+        <div class="card_header">
+            <p class="title">Экономия семейного бюджета</p>
+        </div>
+        <div class="card_body">
+
+            <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>План</th>
+                    <th>Факт</th>
+                    <th>Отклонение</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Итого расходов</td>
+                        <td><?php echo $result_plan_output ?></td>
+                        <td><?php echo $result_fact_output ?></td>
+                        <td><?php echo $result_deviation_output ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Экономия семейного бюджета</td>
+                        <td> <?php echo $result_fact ?></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- ####   Таблица Экономия семейного бюджета    ####  -->
+
+
+    <div class="categorys_table input hidden">
         <div class="row item_title">
             <div class="col-sm-4 col-xs-3">
                 Название
@@ -143,10 +274,8 @@ $this->title = 'Бюджет';
         <?php } ?>
     </div>
 
-    <hr>
-
 <?php if ($categorys_output) { ?>
-    <div class="categorys_table output">
+    <div class="categorys_table output hidden">
         <div class="row item_title">
             <div class="col-sm-4 col-xs-3">
                 Название
@@ -200,7 +329,7 @@ $this->title = 'Бюджет';
     </div>
 <?php } ?>
 
-    <div class="categorys_table results">
+    <div class="categorys_table results hidden">
         <div class="row item">
             <div class="col-sm-4 col-xs-3">
                 Итого расходов
