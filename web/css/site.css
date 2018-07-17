@@ -248,6 +248,8 @@ body {
     background-clip: border-box;
     border: 1px solid #c8ced3;
     border-radius: .25rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .main_title {
@@ -431,6 +433,7 @@ a.desc:after {
 }
 .btn_dark:focus, .btn_dark.focus {
     box-shadow: 0 0 0 0.2rem rgba(47,53,58,.5);
+    color: #ffffff;
 }
 
 .top_items {

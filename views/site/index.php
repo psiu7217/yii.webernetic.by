@@ -15,7 +15,7 @@ $this->title = 'Бюджет';
     <div class="top_block">
         <div class="row">
             <div class="col-sm-4">
-                <button class="btn btn_filter hidden-xs">Фильтр</button>
+                <button class="btn btn_filter btn_dark hidden-xs">Фильтр</button>
             </div>
             <div class="col-sm-4">
 
@@ -28,24 +28,30 @@ $this->title = 'Бюджет';
 
 <?php Pjax::begin(['enablePushState' => false]); ?>
     <div class="filter_block">
-        <div class="row">
-            <div class="col-sm-12">
-                <form action="/site/index" method="post" data-pjax="1">
-                    <p class="title">Интервал</p>
-                    <div class="form-group">
-                        <label for="date_start">Дата начало</label>
-                        <input type="date" class="form-control" name="date_start" id="date_start" placeholder="Дата начало"
-                               value="<?php echo $date_start ?>">
-                    </div>
+        <div class="card">
+            <div class="card_header">
+                <p class="title">Интервал</p>
+            </div>
+            <div class="card_body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form action="/site/index" method="post" data-pjax="1">
+                            <div class="form-group">
+                                <label for="date_start">Дата начало</label>
+                                <input type="date" class="form-control" name="date_start" id="date_start" placeholder="Дата начало"
+                                       value="<?php echo $date_start ?>">
+                            </div>
 
-                    <div class="form-group">
-                        <label for="date_end">Дата конец</label>
-                        <input type="date" class="form-control" name="date_end" id="date_end" placeholder="Дата конец"
-                               value="<?php echo $date_end ?>">
-                    </div>
+                            <div class="form-group">
+                                <label for="date_end">Дата конец</label>
+                                <input type="date" class="form-control" name="date_end" id="date_end" placeholder="Дата конец"
+                                       value="<?php echo $date_end ?>">
+                            </div>
 
-                    <button type="submit" class="btn">Применить</button>
-                </form>
+                            <button type="submit" class="btn">Применить</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -209,7 +215,7 @@ $this->title = 'Бюджет';
                     </tr>
                     <tr>
                         <td colspan="3">Экономия семейного бюджета</td>
-                        <td> <?php echo $result_fact ?></td>
+                        <td><strong><?php echo $result_fact ?></strong></td>
                     </tr>
 
                 </tbody>
@@ -349,7 +355,7 @@ $this->title = 'Бюджет';
                 Экономия семейного бюджета
             </div>
             <div class="col-sm-2 col-xs-3">
-                <?php echo $result_fact ?>
+                <strong><?php echo $result_fact ?></strong>
             </div>
         </div>
     </div>
