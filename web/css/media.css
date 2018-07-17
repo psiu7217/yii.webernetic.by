@@ -41,6 +41,11 @@
     .last_check .item.active .data {
         opacity: 1;
     }
+    .form_add_check .btn {
+        width: 100%;
+        height: 50px;
+        margin: 0 0 5px 0;
+    }
 }
 @media screen and (max-width: 590px) {
     

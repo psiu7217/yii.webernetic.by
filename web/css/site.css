@@ -409,6 +409,23 @@ a.desc:after {
     background-color: #115fb7;
     color: #ffffff;
 }
+.btn_dark {
+    color: #fff;
+    background-color: #2f353a;
+    border-color: #2f353a;
+}
+.btn_dark:hover {
+    color: #fff;
+    background-color: #1e2225;
+    border-color: #181b1e;
+}
+.btn_dark:focus, .btn_dark.focus {
+    box-shadow: 0 0 0 0.2rem rgba(47,53,58,.5);
+}
+
+.top_items {
+    margin: 5px 0;
+}
 .top_items .btn {
 
 }
@@ -615,4 +632,7 @@ header .navbar-brand {
 }
 .overflow_auto {
     overflow: auto;
+}
+.form_add_check {
+
 }

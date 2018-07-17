@@ -16,6 +16,7 @@ class ChecksController extends MainController
 
         $data = array();
 
+        $data['user_id'] = Users::$id;
         $data_day = date('j');
 
         if ($data_day < 14) {
@@ -50,6 +51,9 @@ class ChecksController extends MainController
     public function actionAdd()
     {
         $data = array();
+
+        if (!Users::$id) return $this->redirect(['users/login']);
+        $data['user_id'] = Users::$id;
 
         $data['error'] = false;
         $data['success'] = false;
