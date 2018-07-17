@@ -402,8 +402,18 @@ a.desc:after {
     box-shadow: 0 0 0 0.2rem rgba(77,189,116,.5);
 }
 .btn_red {
-    background-color: #ce1c1f;
-    color: #ffffff;
+    color: #fff;
+    background-color: #f86c6b;
+    border-color: #f86c6b;
+}
+.btn_red:hover {
+    color: #fff;
+    background-color: #f64846;
+    border-color: #f63c3a;
+}
+.btn_red:focus {
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(248,108,107,.5);
 }
 .btn_blue {
     background-color: #115fb7;
@@ -635,4 +645,9 @@ header .navbar-brand {
 }
 .form_add_check {
 
+}
+.form_show_all_check {
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
 }
