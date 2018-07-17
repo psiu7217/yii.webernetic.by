@@ -83,7 +83,7 @@ use yii\widgets\Pjax;
                             <tr>
                                 <th scope="row"><?php echo $check->id ?></th>
                                 <td>
-                                    <a href="<?php echo $url_edit . '?id=' . $check->id; ?>">
+                                    <a href="<?php echo $url_edit . '?id=' . $check->id; ?>" data-pjax="0">
                                         <?php echo $check->name ?>
                                     </a>
                                 </td>
