@@ -32,6 +32,9 @@ class Categorys extends ActiveRecord
         }
     }
 
+    static public function get_category_input_main() {
+        return Categorys::find()->where(['type' => 0, 'active' => 1, 'id_parent' => 0, 'id_user' => Users::$id])->orderBy('sort')->all();
+    }
 
     static public function get_category_parent_id($id_parent = 0) {
         return Categorys::find()->where(['id_parent' => $id_parent, 'active' => 1, 'id_user' => Users::$id])->orderBy('sort')->all();

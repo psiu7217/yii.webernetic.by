@@ -27,6 +27,21 @@ $this->params['breadcrumbs'][] = [
     <div class="card_body">
         <div class="row">
             <div class="col-sm-12">
+                <p><a href="<?php echo $url_input ?>" class="btn btn_dark">Статистика Доходов</a></p>
+                <p><a href="<?php echo $url_output ?>" class="btn btn_dark">Статистика Расходов</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card_header">
+        Статистика плана расходов на текущий месяц
+    </div>
+    <div class="card_body">
+        <div class="row">
+            <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="graf_main" style="width: 100%; height: 400px;"></div>
