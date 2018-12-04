@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = [
 
 <div class="card">
     <div class="card_header">
-        Статистика
+        Статистика (test git)
     </div>
     <div class="card_body">
         <div class="row">
