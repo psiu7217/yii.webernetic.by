@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use app\widgets\Alert;
@@ -21,7 +22,8 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -46,10 +48,10 @@ AppAsset::register($this);
         echo Nav::widget([
             'items' => [
                 //['label' => 'Главная', 'url' => Yii::$app->homeUrl, 'active'=>\Yii::$app->controller->id ==  '/'],
-                ['label' => 'Пользователи', 'url' => ['/users'] ,'active'=>\Yii::$app->controller->id ==  'users'],
-                ['label' => 'Категории', 'url' => ['/categorys'] ,'active'=>\Yii::$app->controller->id ==  'categorys'],
-                ['label' => 'Чеки', 'url' => ['/checks'], 'active' =>\Yii::$app->controller->id ==  'checks'],
-                ['label' => 'Статистика', 'url' => ['/statistics'], 'active'=>\Yii::$app->controller->id == 'statistics'],
+                ['label' => 'Пользователи', 'url' => ['/users'], 'active' => \Yii::$app->controller->id == 'users'],
+                ['label' => 'Категории', 'url' => ['/categorys'], 'active' => \Yii::$app->controller->id == 'categorys'],
+                ['label' => 'Чеки', 'url' => ['/checks'], 'active' => \Yii::$app->controller->id == 'checks'],
+                ['label' => 'Статистика', 'url' => ['/statistics'], 'active' => \Yii::$app->controller->id == 'statistics'],
             ],
         ]);
         ?>
@@ -61,16 +63,16 @@ AppAsset::register($this);
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
+
+        <footer class="footer">
+            <div class="col-sm-12">
+                <p class="pull-left">&copy; Psiu <?= date('Y') ?></p>
+                <p class="pull-right">Работает на чистой магии</p>
+            </div>
+        </footer>
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 

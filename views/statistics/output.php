@@ -9,25 +9,6 @@ use yii\helpers\Html;
 
 ?>
 
-<!--
-<div class="card">
-    <div class="card_header">
-        Общая Статистика доходов
-    </div>
-    <div class="card_body">
-        <div class="row">
-            <pre>
-                <?php print_r($categorys) ?>
-            </pre>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="graf_main" style="width: 100%; height: 400px;"></div>
-            </div>
-        </div>
-    </div>
-</div>
--->
 
 <div class="card">
     <div class="card_header">
@@ -43,18 +24,16 @@ use yii\helpers\Html;
 </div>
 
 
-
-
 <script type="text/javascript">
-    google.charts.load('current', {'packages': ['corechart']});
+    google.charts.load('current', {'packages': ['corechart', 'bar']});
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ["Дата", <?php foreach ($categorys as $category) {
-                    foreach ($category as $item) echo '"' . $item['name'] . '", ';
-                    break;
-                }?>],
+                foreach ($category as $item) echo '"' . $item['name'] . '", ';
+                break;
+            }?>],
 
             <?php
             foreach ($categorys as $key => $value) {
@@ -79,6 +58,3 @@ use yii\helpers\Html;
         chart.draw(data, options);
     }
 </script>
-
-
-

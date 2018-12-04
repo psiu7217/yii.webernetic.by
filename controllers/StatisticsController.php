@@ -154,7 +154,7 @@ class StatisticsController extends MainController
         $data = array();
 
         //Получаем основные категории доходов
-        $data['main_categorys'] = Categorys::get_category_input_main();
+        $data['main_categorys'] = Categorys::get_category_output_main();
 
         //Дата начала ставим первыми чеков (в этом случае это апрель 2018)
         $date_start = date('2018-04-14');
