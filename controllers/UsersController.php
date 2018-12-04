@@ -38,7 +38,7 @@ class UsersController extends MainController
 
         $request_params = array(
             'client_id' => $CLIENT_ID,
-            'redirect_uri' => 'http://yii.webernetic.by/users',
+            'redirect_uri' => 'http://psiu.by/users',
             'display'       => 'popup',
             'scope'         => '6',
             'v'             => '5.80',

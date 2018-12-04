@@ -47,7 +47,6 @@ AppAsset::register($this);
         <?php
         echo Nav::widget([
             'items' => [
-                //['label' => 'Главная', 'url' => Yii::$app->homeUrl, 'active'=>\Yii::$app->controller->id ==  '/'],
                 ['label' => 'Пользователи', 'url' => ['/users'], 'active' => \Yii::$app->controller->id == 'users'],
                 ['label' => 'Категории', 'url' => ['/categorys'], 'active' => \Yii::$app->controller->id == 'categorys'],
                 ['label' => 'Чеки', 'url' => ['/checks'], 'active' => \Yii::$app->controller->id == 'checks'],
@@ -62,6 +61,8 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
+
+
         <?= $content ?>
 
         <footer class="footer">
